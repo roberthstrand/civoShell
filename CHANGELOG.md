@@ -1,11 +1,22 @@
 # Module Release History
 
-## 0.1.0 [2020-07-11]
+## 0.0.8 [2020-09-11]
 
 ### Initial release
 
-**New Features**
+A very much work in progress, and not yet added to the PowerShell Gallery. Missing help comments, pesters tests and much more.
 
-- A feature
-- The second one
-- Maybe even a third!
+**Kubernetes functionality**
+
+```
+New-CivoKubernetesCluster
+Get-CivoKubernetesCluster
+Set-CivoKubernetesCluster
+Remove-CivoKubernetesCluster
+```
+
+**Networking**
+
+```
+Get-CivoNetwork
+```

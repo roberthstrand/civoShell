@@ -1,6 +1,6 @@
 @{
     RootModule        = 'civoShell.psm1'
-    ModuleVersion     = '0.0.1'
+    ModuleVersion     = '0.0.8'
     GUID              = '2512b980-e14e-40e3-bc6d-fe722196a06a'
 
     Author            = 'Roberth Strand'
@@ -18,7 +18,7 @@
         "Remove-CivoKubernetesCluster"
         )
     #CmdletsToExport   = '*'
-    VariablesToExport = '*'
+    #VariablesToExport = '*'
     AliasesToExport   = '*'
 
     PrivateData       = @{
