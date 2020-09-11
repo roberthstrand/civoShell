@@ -6,6 +6,8 @@ function Get-CivoKubernetesCluster {
     Lists either all Kubernetes clusters, or a specific one by providing the cluster ID.
     .PARAMETER Id
     The ID of a specific cluster.
+    .PARAMETER Detailed
+    Use this switch to get all the details about your cluster.
     .INPUTS
     You can pipe a cluster ID to Get-CivoKubernetesCluster
     .OUTPUTS
@@ -14,14 +16,19 @@ function Get-CivoKubernetesCluster {
     Get-CivoKubernetesCluster
     .EXAMPLE
     Get-CivoKubernetesCluster -Id xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
+    .EXAMPLE
+    Get-CivoKubernetesCluster -Detailed
     .LINK
     https://github.com/roberthstrand/civoShell
     #>
     [CmdletBinding()]
     param (
-        [Parameter(Position = 0,ValueFromPipeline=$true)]
+        [Parameter(Position = 0,ValueFromPipeline = $true)]
         [string]
-        $Id
+        $Id,
+        [Parameter()]
+        [switch]
+        $Detailed
     )
     
     $CallSplat = @{
@@ -35,15 +42,36 @@ function Get-CivoKubernetesCluster {
             $call = Invoke-CivoApi @CallSplat
         }
 
+    # Running the results through a ForEach loop, to seperate the clusters.
     $call | ForEach-Object {
-        [PSCustomObject]@{
-            Name                = $_.name
-            Id                  = $_.id
-            Status              = $_.status
-            Ready               = $_.ready
-            NodeCount           = $_.num_target_nodes
-            KubernetesVersion   = $_.kubernetes_version
-            Tags                = $_.tags
+        if ($Detailed -eq $true)
+        {
+            [PSCustomObject]@{
+                Id                  = $_.id
+                Name                = $_.name
+                Ready               = $_.ready
+                Status              = $_.status
+                Version             = $_.version
+                Created             = $_.created_at
+                NodeCount           = $_.num_target_nodes
+                Nodes               = $_.instances.size
+                KubernetesVersion   = $_.kubernetes_version
+                Tags                = $_.tags
+                ApiEndpoint         = $_.api_endpoint
+                DNS                 = $_.dns_entry
+                MasterIp            = $_.master_ip
+            }
+        } else {
+            [PSCustomObject]@{
+                Id                  = $_.id
+                Name                = $_.name
+                Ready               = $_.ready
+                Status              = $_.status
+                NodeCount           = $_.num_target_nodes
+                Nodes               = $_.instances.size
+                KubernetesVersion   = $_.kubernetes_version
+                Tags                = $_.tags
+            }
         }
     }
 }

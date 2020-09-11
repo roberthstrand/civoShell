@@ -13,8 +13,9 @@
     FunctionsToExport = @(
         "Set-CivoApiToken"
         "New-CivoKubernetesCluster"
-        "Remove-CivoKubernetesCluster"
         "Get-CivoKubernetesCluster"
+        "Set-CivoKubernetesCluster"
+        "Remove-CivoKubernetesCluster"
         )
     #CmdletsToExport   = '*'
     VariablesToExport = '*'

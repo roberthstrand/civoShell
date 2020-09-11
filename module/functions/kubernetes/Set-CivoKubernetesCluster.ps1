@@ -1,36 +1,36 @@
-function New-CivoKubernetesCluster {
+function Set-CivoKubernetesCluster {
     [CmdletBinding()]
     param (
-        [Parameter(Position = 0, Mandatory)]
+        [Parameter(Position = 0, Mandatory,ValueFromPipeline = $true)]
         [string]
-        $Name,
+        $Id,
         [Parameter(Position = 1)]
         [string]
-        $NodeCount = 3,
+        $Name,
         [Parameter(Position = 2)]
         [string]
-        $NodeSize,
+        $NodeCount,
         [Parameter(Position = 3)]
         [string]
-        $KubernetesVersion,
+        $NodeToDestroy,
         [Parameter(Position = 4)]
         [string]
-        $Tags,
+        $KubernetesVersion,
         [Parameter(Position = 5)]
         [string]
         $Applications
     )
-    $Form                   = @{
+
+    $Form = @{
         name                = $Name
         num_target_nodes    = $NodeCount
-        target_node_size    = $NodeSize
+        node_destroy        = $NodeToDestroy
         kubernetes_version  = $KubernetesVersion
-        tags                = $Tags
         applications        = $Applications
     }
     $CallSplat  = @{
-        Uri     = "kubernetes/clusters/"
-        Method  = 'POST'
+        Uri     = "kubernetes/clusters/$Id"
+        Method  = 'PUT'
         Form    = $Form
     }
     $call = Invoke-CivoApi @CallSplat
