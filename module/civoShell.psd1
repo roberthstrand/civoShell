@@ -10,8 +10,13 @@
 
     Description       = 'A PowerShell module for the Civo Cloud platform'
 
-    FunctionsToExport = '*'
-    CmdletsToExport   = '*'
+    FunctionsToExport = @(
+        "Set-CivoApiToken"
+        "New-CivoKubernetesCluster"
+        "Remove-CivoKubernetesCluster"
+        "Get-CivoKubernetesCluster"
+        )
+    #CmdletsToExport   = '*'
     VariablesToExport = '*'
     AliasesToExport   = '*'
 

@@ -6,7 +6,7 @@ function New-CivoKubernetesCluster {
         $Name,
         [Parameter(Position = 1)]
         [string]
-        $NodeCount,
+        $NodeCount = 3,
         [Parameter(Position = 2)]
         [string]
         $NodeSize,
@@ -23,7 +23,7 @@ function New-CivoKubernetesCluster {
 
     $CallSplat  = @{
         Uri     = "kubernetes/clusters/"
-        Method  = 'Post'
+        Method  = 'POST'
         Form    = @{
             name                = $Name
             num_target_nodes    = $NodeCount

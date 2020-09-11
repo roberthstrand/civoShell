@@ -11,7 +11,7 @@ function Invoke-CivoApi {
         [string]
         $Body,
         [Parameter(Position = 3)]
-        [System.Collections.ArrayList]
+        [System.Collections.IDictionary]
         $Form,
         [Parameter()]
         [string]
@@ -21,16 +21,17 @@ function Invoke-CivoApi {
     $restSplat = @{
         Uri    = "https://api.civo.com/v2/$Uri"
         Method = $Method
-        Body   = $Body
+        #Body   = $Body
         Form   = $Form
         header = @{ 
             'Authorization' = "Bearer $Token"
         }
     }
-    try {
-        Invoke-RestMethod @restSplat -ErrorAction Stop
-    }
-    catch {
-        Write-Error "API Token needs to be set, either by using the Token parameter or by the CivoToken environment variable."
-    }
+    Invoke-RestMethod @restSplat -ErrorAction Stop
+    # try {
+    #     Invoke-RestMethod @restSplat -ErrorAction Stop
+    # }
+    # catch {
+    #     Write-Error "API Token needs to be set, either by using the Token parameter or by the CivoToken environment variable."
+    # }
 }
