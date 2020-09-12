@@ -2,7 +2,7 @@
 
 ## 0.1.0 [2020-09-13]
 
-### Added more functionality, and improved old ones
+### Added more functionality, and general improvements
 
 #### General improvements
 
