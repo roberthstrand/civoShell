@@ -1,4 +1,4 @@
-name: Pester-Windows
+name: Pester
 on:
   push:
     branches: [ main ]
@@ -13,5 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: zyborg/pester-tests-report@v1.3.2
-      include_paths: tests
-      output_level: detailed
+      with:
+        include_paths: tests
+        output_level: detailed
