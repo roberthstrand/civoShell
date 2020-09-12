@@ -1,6 +1,6 @@
 @{
     RootModule        = 'civoShell.psm1'
-    ModuleVersion     = '0.0.8'
+    ModuleVersion     = '0.1.0'
     GUID              = '2512b980-e14e-40e3-bc6d-fe722196a06a'
 
     Author            = 'Roberth Strand'
@@ -8,18 +8,23 @@
 
     Copyright         = 'civoShell is licensed under the GNU General Public License v3.0'
 
-    Description       = 'A PowerShell module for the Civo Cloud platform'
+    Description       = 'A PowerShell module for the Civo Cloud platform.'
 
     FunctionsToExport = @(
         "Set-CivoApiToken"
+        # Kubernetes
         "New-CivoKubernetesCluster"
         "Get-CivoKubernetesCluster"
         "Set-CivoKubernetesCluster"
         "Remove-CivoKubernetesCluster"
+        "Get-CivoKubernetesVersion"
+        "Get-CivoKubernetesApplication"
+        # Networking
+        "Get-CivoNetwork"
         )
     #CmdletsToExport   = '*'
     #VariablesToExport = '*'
-    AliasesToExport   = '*'
+    #AliasesToExport   = '*'
 
     PrivateData       = @{
         PSData = @{

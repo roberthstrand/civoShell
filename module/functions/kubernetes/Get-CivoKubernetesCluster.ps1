@@ -33,7 +33,7 @@ function Get-CivoKubernetesCluster {
     
     $CallSplat = @{
         Uri     = "kubernetes/clusters/$Id"
-        Method  = 'Get'
+        Method  = 'GET'
     }
     # If no $Id is provided, we need to select the items object.
     if (!$Id) {
@@ -54,12 +54,13 @@ function Get-CivoKubernetesCluster {
                 Version             = $_.version
                 Created             = $_.created_at
                 NodeCount           = $_.num_target_nodes
-                Nodes               = $_.instances.size
+                NodesSize           = $_.instances.size
                 KubernetesVersion   = $_.kubernetes_version
                 Tags                = $_.tags
                 ApiEndpoint         = $_.api_endpoint
                 DNS                 = $_.dns_entry
                 MasterIp            = $_.master_ip
+                Applications        = $_.installed_applications.application
             }
         } else {
             [PSCustomObject]@{
@@ -68,7 +69,7 @@ function Get-CivoKubernetesCluster {
                 Ready               = $_.ready
                 Status              = $_.status
                 NodeCount           = $_.num_target_nodes
-                Nodes               = $_.instances.size
+                NodesSize           = $_.instances.size
                 KubernetesVersion   = $_.kubernetes_version
                 Tags                = $_.tags
             }
