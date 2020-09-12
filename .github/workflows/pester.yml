@@ -1,0 +1,17 @@
+name: Pester-Windows
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  test:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+    - uses: actions/checkout@v1
+    - uses: zyborg/pester-tests-report@v1.3.2
+      include_paths: tests
+      output_level: detailed
