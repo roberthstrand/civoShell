@@ -1,5 +1,7 @@
 # civoShell
 
+![Pester](https://github.com/roberthstrand/civoShell/workflows/Pester/badge.svg)
+
 Civo.com is a UK based cloud platform provider, with a developer and community focused approach. I found them through their #kube100 beta that they run to promote their managed Kubernetes service, running on k3s.
 
 Feel free to sign up for an account ([referal link](https://www.civo.com/?ref=c57484)), or sign up for the [#kube100](https://www.civo.com/kube100) beta.
