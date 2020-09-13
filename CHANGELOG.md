@@ -1,5 +1,15 @@
 # Module Release History
 
+## 0.2.0 [2020-09-13]
+
+### Networking complete, general bug fixes and improvements
+
+* New-CivoNetwork
+* Set-CivoNetwork
+* Remove-CivoNetwork
+
+Added cmdlet documentation and will be publishing the docs folder through Github pages. Also added some basic Pester tests for creating and listing networks.
+
 ## 0.1.0 [2020-09-13]
 
 ### Added more functionality, and general improvements

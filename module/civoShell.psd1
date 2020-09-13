@@ -1,6 +1,6 @@
 @{
     RootModule        = 'civoShell.psm1'
-    ModuleVersion     = '0.1.0'
+    ModuleVersion     = '0.2.0'
     GUID              = '2512b980-e14e-40e3-bc6d-fe722196a06a'
 
     Author            = 'Roberth Strand'
@@ -12,6 +12,7 @@
 
     FunctionsToExport = @(
         "Set-CivoApiToken"
+        "Get-CivoRegion"
         # Kubernetes
         "New-CivoKubernetesCluster"
         "Get-CivoKubernetesCluster"
@@ -20,7 +21,10 @@
         "Get-CivoKubernetesVersion"
         "Get-CivoKubernetesApplication"
         # Networking
+        "New-CivoNetwork"
         "Get-CivoNetwork"
+        "Set-CivoNetwork"
+        "Remove-CivoNetwork"
         )
     #CmdletsToExport   = '*'
     #VariablesToExport = '*'

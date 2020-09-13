@@ -19,7 +19,7 @@ function Get-CivoKubernetesCluster {
     .EXAMPLE
     Get-CivoKubernetesCluster -Detailed
     .LINK
-    https://github.com/roberthstrand/civoShell
+    https://roberthstrand.github.io/civoShell/Get-CivoKubernetesCluster.md
     #>
     [CmdletBinding()]
     param (

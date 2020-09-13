@@ -4,6 +4,7 @@ function New-CivoKubernetesCluster {
     Create a new Kubernetes Cluster.
     .DESCRIPTION
     Create a new k3s Kubernetes cluster.
+    
     You can either just define the name of the cluster or define it just as you want. See the available parameters for what you can do.
     .PARAMETER Name
     Set the name of your cluster. This parameter is mandatory and must be set to continue.
@@ -33,7 +34,7 @@ function New-CivoKubernetesCluster {
     }
     New-CivoKubernetesCluster @cluster
     .LINK
-    https://github.com/roberthstrand/civoShell
+    https://roberthstrand.github.io/civoShell/New-CivoKubernetesCluster.md
     #>
     [CmdletBinding()]
     param (
