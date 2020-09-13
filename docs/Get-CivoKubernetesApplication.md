@@ -1,0 +1,42 @@
+---
+external help file: civoShell-help.xml
+Module Name: civoShell
+online version: https://github.com/roberthstrand/civoShell
+schema: 2.0.0
+---
+
+# Get-CivoKubernetesApplication
+
+## SYNOPSIS
+List available applications.
+
+## SYNTAX
+
+```
+Get-CivoKubernetesApplication
+```
+
+## DESCRIPTION
+List available applications from the marketplace.
+These can be installed at deployment, or later on.
+
+## EXAMPLES
+
+### EXAMPLE 1
+```
+Get-CivoKubernetesApplication
+```
+
+## PARAMETERS
+
+## INPUTS
+
+## OUTPUTS
+
+### All applications, or applications based on the name parameter.
+## NOTES
+
+## RELATED LINKS
+
+[https://github.com/roberthstrand/civoShell](https://github.com/roberthstrand/civoShell)
+
