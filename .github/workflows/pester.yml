@@ -13,5 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run Pester tests
-      run: Invoke-Pester -Path "tests"
+      run: |
+        Install-Module -Name Pester -RequiredVersion 5.0.4;
+        Invoke-Pester -Path "tests";
       shell: pwsh
