@@ -1,0 +1,12 @@
+name: Publish Module
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  publish-module:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Publish-Module
+      run: Publish-Module -Path .\module\ -NuGetApiKey ${{ secrets.POWERSHELLGALLERY }}
+      shell: pwsh
