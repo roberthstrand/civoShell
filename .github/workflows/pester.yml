@@ -17,6 +17,7 @@ jobs:
         Set-PSRepository psgallery -InstallationPolicy trusted
         Install-Module -Name Pester -RequiredVersion 5.0.4 -Force;
         Invoke-Pester -Path "tests";
+        if ($Error[0].Fullyqualifiederrorid -eq 'PesterAssertionFailed') {exit 1};
       shell: pwsh
   
   test-posh:
@@ -28,4 +29,4 @@ jobs:
         Set-PSRepository psgallery -InstallationPolicy trusted
         Install-Module -Name Pester -RequiredVersion 5.0.4 -Force;
         Invoke-Pester -Path "tests";
-      shell: powershell
+        if ($Error[0].Fullyqualifiederrorid -eq 'PesterAssertionFailed') {exit 1};
