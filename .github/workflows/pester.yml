@@ -12,6 +12,6 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v1
-    - uses: zyborg/pester-tests-report@v1.3.2
-      with:
-        include_paths: tests
+    - name: Run Pester tests
+      run: Get-ChildItem "$GITHUB_WORKSPACE/tests"
+      shell: pwsh
