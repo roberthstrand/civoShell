@@ -1,7 +1,7 @@
 function Remove-CivoKubernetesCluster {
     [CmdletBinding()]
     param (
-        [Parameter(Position = 0,ValueFromPipeline=$true, Mandatory = $true)]
+        [Parameter(Position = 0,ValueFromPipeline = $true, Mandatory = $true)]
         [string]
         $Id
     )

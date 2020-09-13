@@ -22,6 +22,7 @@
         # Networking
         "New-CivoNetwork"
         "Get-CivoNetwork"
+        "Remove-CivoNetwork"
         )
     #CmdletsToExport   = '*'
     #VariablesToExport = '*'
