@@ -12,6 +12,7 @@
 
     FunctionsToExport = @(
         "Set-CivoApiToken"
+        "Get-CivoRegion"
         # Kubernetes
         "New-CivoKubernetesCluster"
         "Get-CivoKubernetesCluster"
