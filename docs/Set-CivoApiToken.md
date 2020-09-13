@@ -1,7 +1,7 @@
 ---
 external help file: civoShell-help.xml
 Module Name: civoShell
-online version: https://github.com/roberthstrand/civoShell
+online version: https://roberthstrand.github.io/civoShell/Remove-CivoNetwork.md
 schema: 2.0.0
 ---
 

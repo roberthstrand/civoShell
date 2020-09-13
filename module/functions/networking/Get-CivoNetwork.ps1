@@ -29,7 +29,7 @@ function Get-CivoNetwork {
 
     Get-CivoNetwork -Label $Networks
     .LINK
-    https://github.com/roberthstrand/civoShell
+    https://roberthstrand.github.io/civoShell/Get-CivoNetwork.md
     #>
     [CmdletBinding()]
     param (

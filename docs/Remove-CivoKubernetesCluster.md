@@ -1,45 +1,62 @@
 ---
 external help file: civoShell-help.xml
 Module Name: civoShell
-online version: https://github.com/roberthstrand/civoShell
+online version: https://roberthstrand.github.io/civoShell/Remove-CivoKubernetesCluster.md
 schema: 2.0.0
 ---
 
 # Remove-CivoKubernetesCluster
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Remove a Kubernetes cluster.
 
 ## SYNTAX
 
 ```
-Remove-CivoKubernetesCluster [-Id] <String> [<CommonParameters>]
+Remove-CivoKubernetesCluster [-Id] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Remove a Kubernetes cluster, based on ID.
+The ID parameter is mandatory, and can take more than one cluster ID at the time.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
+```
+Remove-CivoKubernetesCluster -Id xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-{{ Add example description here }}
+### EXAMPLE 2
+```
+New-CivoKubernetesCluster -Name "Cluster01" -NodeCount 1
+```
+
+### EXAMPLE 3
+```
+$cluster            = @{
+    Name            = "ClustersLastStand"
+    NodeCount       = 2
+    NodesSize        = "g2.large"
+    Tags            = "prod powershell"
+    Applications    = "prometheus-operator, MinIO"
+}
+New-CivoKubernetesCluster @cluster
+```
 
 ## PARAMETERS
 
 ### -Id
-{{ Fill Id Description }}
+The ID of the cluster you want to remove.
+This parameter is mandatory and must be set to continue.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
@@ -50,10 +67,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
 ## OUTPUTS
 
-### System.Object
+### Output object with the cluster that is removed, if it is successfull.
 ## NOTES
 
 ## RELATED LINKS
+
+[https://roberthstrand.github.io/civoShell/Remove-CivoKubernetesCluster.md](https://roberthstrand.github.io/civoShell/Remove-CivoKubernetesCluster.md)
+

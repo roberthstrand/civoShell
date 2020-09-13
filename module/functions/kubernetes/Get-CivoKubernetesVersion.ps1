@@ -9,7 +9,7 @@ function Get-CivoKubernetesVersion {
     .EXAMPLE
     Get-CivoKubernetesVersion
     .LINK
-    https://github.com/roberthstrand/civoShell
+    https://roberthstrand.github.io/civoShell/Get-CivoKubernetesVersion.md
     #>
     [CmdletBinding()]
     

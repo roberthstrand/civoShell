@@ -30,7 +30,7 @@ function Remove-CivoNetwork {
 
     Remove-CivoNetwork -Label $Networks
     .LINK
-    https://github.com/roberthstrand/civoShell
+    https://roberthstrand.github.io/civoShell/Remove-CivoNetwork.md
     #>
     [CmdletBinding()]
     param (

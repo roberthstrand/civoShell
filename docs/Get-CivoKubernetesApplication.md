@@ -1,7 +1,7 @@
 ---
 external help file: civoShell-help.xml
 Module Name: civoShell
-online version: https://github.com/roberthstrand/civoShell
+online version: https://roberthstrand.github.io/civoShell/Get-CivoKubernetesApplication.md
 schema: 2.0.0
 ---
 
@@ -38,5 +38,5 @@ Get-CivoKubernetesApplication
 
 ## RELATED LINKS
 
-[https://github.com/roberthstrand/civoShell](https://github.com/roberthstrand/civoShell)
+[https://roberthstrand.github.io/civoShell/Get-CivoKubernetesApplication.md](https://roberthstrand.github.io/civoShell/Get-CivoKubernetesApplication.md)
 

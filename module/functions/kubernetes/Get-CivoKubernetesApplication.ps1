@@ -9,7 +9,7 @@ function Get-CivoKubernetesApplication {
     .EXAMPLE
     Get-CivoKubernetesApplication
     .LINK
-    https://github.com/roberthstrand/civoShell
+    https://roberthstrand.github.io/civoShell/Get-CivoKubernetesApplication.md
     #>
     [CmdletBinding()]
     

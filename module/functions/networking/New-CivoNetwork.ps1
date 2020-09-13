@@ -13,7 +13,7 @@ function New-CivoNetwork {
     .EXAMPLE
     New-CivoNetwork -Label 'Network02'
     .LINK
-    https://github.com/roberthstrand/civoShell
+    https://roberthstrand.github.io/civoShell/New-CivoNetwork.md
     #>
     [CmdletBinding()]
     param (

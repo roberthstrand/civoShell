@@ -1,7 +1,7 @@
 ---
 external help file: civoShell-help.xml
 Module Name: civoShell
-online version: https://github.com/roberthstrand/civoShell
+online version: https://roberthstrand.github.io/civoShell/Remove-CivoNetwork.md
 schema: 2.0.0
 ---
 
@@ -38,6 +38,21 @@ $Networks =(
 ```
 
 Remove-CivoNetwork -Id $Networks
+
+### EXAMPLE 3
+```
+Remove-CivoNetwork -Label prod-client01
+```
+
+### EXAMPLE 4
+```
+$Networks =(
+"prod-client01",
+"test-client01"
+)
+```
+
+Remove-CivoNetwork -Label $Networks
 
 ## PARAMETERS
 
@@ -85,5 +100,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[https://github.com/roberthstrand/civoShell](https://github.com/roberthstrand/civoShell)
+[https://roberthstrand.github.io/civoShell/Remove-CivoNetwork.md](https://roberthstrand.github.io/civoShell/Remove-CivoNetwork.md)
 
