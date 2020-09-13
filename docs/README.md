@@ -1,6 +1,7 @@
 # Civo Cloud CMDlets
 
 * [Set-CivoApiToken](Set-CivoApiToken.md)
+* [Get-CivoRegion](Get-CivoRegion.md)
 ## Kubernetes
 * [New-CivoKubernetesCluster](New-CivoKubernetesCluster.md)
 * [Get-CivoKubernetesCluster](Get-CivoKubernetesCluster.md)
