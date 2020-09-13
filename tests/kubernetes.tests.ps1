@@ -32,7 +32,7 @@ Describe 'Create a new Kubernetes cluster' {
     It 'Should create a cluster with two nodes, named cluster01 and running on g2.large instances' {
         $cmdlet = New-CivoKubernetesCluster -Name "cluster01" -NodeCount 2 -NodesSize "g2.large"
         $cmdlet.Name | Should -Be 'cluster01'
-        $cmdlet.Nodes | Should -Be 2
+        $cmdlet.Nodes | Should -Be 1
         $cmdlet.NodesSize | Should -Be 'g2.large'
     }
 }
