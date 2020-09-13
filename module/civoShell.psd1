@@ -20,6 +20,7 @@
         "Get-CivoKubernetesVersion"
         "Get-CivoKubernetesApplication"
         # Networking
+        "New-CivoNetwork"
         "Get-CivoNetwork"
         )
     #CmdletsToExport   = '*'

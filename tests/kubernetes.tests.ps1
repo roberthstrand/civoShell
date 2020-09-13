@@ -1,9 +1,10 @@
 BeforeAll {
     Import-Module ((Split-Path $PSScriptRoot -Parent) + "/module/civoShell.psd1")
 }
+
 Describe 'Get Kubernetes clusters' {
     BeforeAll {
-        . ($PSScriptRoot + "/mocks/Get-CivoKubernetesCluster.ps1")
+        . ($PSScriptRoot + "/mocks/kubernetes/Get-CivoKubernetesCluster.ps1")
     }
 
     It 'Should show all Kubernetes clusters' {
@@ -20,7 +21,7 @@ Describe 'Get Kubernetes clusters' {
 
 Describe 'Create a new Kubernetes cluster' {
     BeforeAll {
-        . ($PSScriptRoot + "/mocks/New-CivoKubernetesCluster.ps1")
+        . ($PSScriptRoot + "/mocks/kubernetes/New-CivoKubernetesCluster.ps1")
     }
 
     It 'Should create a cluster with one node, named pester' {
@@ -36,3 +37,11 @@ Describe 'Create a new Kubernetes cluster' {
         $cmdlet.NodesSize | Should -Be 'g2.large'
     }
 }
+
+# Describe 'Delete a Kubernetes cluster' {
+#     BeforeAll {
+#         . ($PSScriptRoot + "/mocks/kubernetes/Remove-CivoKubernetesCluster.ps1")
+#     }
+
+#     It 'Should result in '
+# }
