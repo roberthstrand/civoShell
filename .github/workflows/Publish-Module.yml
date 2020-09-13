@@ -7,5 +7,5 @@ jobs:
     runs-on: [ ubuntu-latest ]
     steps:
     - name: Publish-Module
-      run: Publish-Module -Path .\module\ -NuGetApiKey ${{ secrets.POWERSHELLGALLERY }}
+      run: Publish-Module -Path .\civoShell\ -NuGetApiKey ${{ secrets.POWERSHELLGALLERY }}
       shell: pwsh

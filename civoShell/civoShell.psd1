@@ -8,7 +8,7 @@
 
     Copyright         = 'civoShell is licensed under the GNU General Public License v3.0'
 
-    Description       = 'A PowerShell module for the Civo Cloud platform.'
+    Description       = 'A PowerShell module for working with the Civo Cloud platform.'
 
     FunctionsToExport = @(
         "Set-CivoApiToken"
