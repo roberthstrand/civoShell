@@ -29,12 +29,7 @@ Remove-CivoKubernetesCluster -Id xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ### EXAMPLE 2
 ```
-New-CivoKubernetesCluster -Name "Cluster01" -NodeCount 1
-```
-
-### EXAMPLE 3
-```
-$cluster            = @{
+$cluster            = @()
     Name            = "ClustersLastStand"
     NodeCount       = 2
     NodesSize        = "g2.large"

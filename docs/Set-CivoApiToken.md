@@ -1,14 +1,14 @@
 ---
 external help file: civoShell-help.xml
 Module Name: civoShell
-online version: https://roberthstrand.github.io/civoShell/Remove-CivoNetwork.md
+online version: https://roberthstrand.github.io/civoShell/Set-CivoApiToken.md
 schema: 2.0.0
 ---
 
 # Set-CivoApiToken
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Set the API key needed to use civoShell.
 
 ## SYNTAX
 
@@ -17,21 +17,23 @@ Set-CivoApiToken [-ApiKey] <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+civoShell is working towards the API for the Civo cloud platform, and authenticates with an API token key.
+This can be found at https://civo.com/api.
+
+Using this cmdlet will create and set the environment variable CivoToken which is the basis for all API calls.
+If this key is compromised, you would have to regenerate the key at https://civo.com/api.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
 ```
-
-{{ Add example description here }}
+Set-CivoApiToken -ApiKey tN5fRvmdxkpQtSr7dBlWC1OuU1seF3KlGa1YzzvEvp8bkpQfl2
+```
 
 ## PARAMETERS
 
 ### -ApiKey
-{{ Fill ApiKey Description }}
+The API key from Civo.
 
 ```yaml
 Type: String
@@ -39,14 +41,14 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+If you have a key set, you can use the switch -force to set a new key.
 
 ```yaml
 Type: SwitchParameter
@@ -54,8 +56,8 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
-Default value: None
+Position: 2
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -65,10 +67,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### ApiKey is mandatory.
 ## OUTPUTS
 
-### System.Object
+### Information that they key is set, or a warning if a key is already present.
 ## NOTES
 
 ## RELATED LINKS
+
+[https://roberthstrand.github.io/civoShell/Set-CivoApiToken.md](https://roberthstrand.github.io/civoShell/Set-CivoApiToken.md)
+
