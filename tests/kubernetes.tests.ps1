@@ -1,5 +1,5 @@
 BeforeAll {
-    Import-Module ((Split-Path $PSScriptRoot -Parent) + "/module/civoShell.psd1")
+    Import-Module ((Split-Path $PSScriptRoot -Parent) + "/civoShell/civoShell.psd1")
 }
 
 Describe 'Get Kubernetes clusters' {
