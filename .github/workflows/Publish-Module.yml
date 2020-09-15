@@ -6,6 +6,7 @@ jobs:
   publish-module:
     runs-on: [ ubuntu-latest ]
     steps:
+    - uses: actions/checkout@v1
     - name: Publish-Module
       run: Publish-Module -Path .\civoShell\ -NuGetApiKey ${{ secrets.POWERSHELLGALLERY }}
       shell: pwsh
