@@ -21,7 +21,8 @@ jobs:
         run: |
           Set-PSRepository psgallery -InstallationPolicy trusted
           Install-Module -Name Pester -RequiredVersion 5.0.4 -Force;
-          Invoke-Pester -Path "tests" -CodeCoverage "civoShell/civoShell.psm1" -CodeCoverageOutputFileFormat "JaCoCo";
+          $paths = @('.\civoShell\functions\*.ps1','.\civoShell\functions\kubernetes\*.ps1','.\civoShell\functions\networking\*.ps1')
+          Invoke-Pester -Path "tests" -CodeCoverage $paths -CodeCoverageOutputFileFormat "JaCoCo";
         shell: pwsh
       
       - name: Codecov
