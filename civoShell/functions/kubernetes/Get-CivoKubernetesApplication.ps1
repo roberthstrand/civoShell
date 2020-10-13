@@ -22,7 +22,7 @@ function Get-CivoKubernetesApplication {
     # Running the results through a ForEach loop, to seperate the applications.
     $call | ForEach-Object {
         [PSCustomObject]@{
-            Version             = $_.name
+            Name                = $_.name
             Label               = $_.title
             Type                = $_.version
             Default             = $_.default

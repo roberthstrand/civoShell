@@ -45,3 +45,16 @@ Describe 'Create a new Kubernetes cluster' {
 
 #     It 'Should result in '
 # }
+
+Describe 'working with applications and kubernetes' {
+    BeforeAll {
+        . ($PSScriptRoot + "/mocks/kubernetes/Get-CivoKubernetesApplication.ps1")
+    }
+
+    It 'Should list all applications' {
+        $apps = Get-CivoKubernetesApplication
+
+        $apps.count | Should -Be 2
+        $apps.name | Sort-Object | Should -Be @('argo','PostgreSQL')
+    }
+}
