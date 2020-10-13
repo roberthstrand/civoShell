@@ -1,6 +1,6 @@
 # civoShell
 
-![Pester](https://github.com/roberthstrand/civoShell/workflows/Pester/badge.svg)
+[![Pester](https://github.com/roberthstrand/civoShell/workflows/Pester/badge.svg)](https://github.com/roberthstrand/civoShell/actions?query=workflow%3APester) [![codecov](https://codecov.io/gh/roberthstrand/civoShell/branch/main/graph/badge.svg)](https://codecov.io/gh/roberthstrand/civoShell)
 
 Civo.com is a UK based cloud platform provider, with a developer and community focused approach. I found them through their #kube100 beta that they run to promote their managed Kubernetes service, running on k3s.
 
