@@ -12,6 +12,10 @@ Describe 'Misc tests' {
         $env:CivoToken | Should -Be 'key'
     }
 
+    It 'should fail to set the API key' {
+        {Set-CivoApiToken -ApiKey 'error' -ErrorAction Stop} | Should -Throw
+    }
+
     It 'shows available regions' {
         $regions = Get-CivoRegion
 

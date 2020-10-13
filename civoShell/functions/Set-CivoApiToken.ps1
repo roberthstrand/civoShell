@@ -30,8 +30,8 @@ function Set-CivoApiToken {
     )
 
     if ((Test-Path -Path "Env:\CivoToken") -and ($Force -eq $false)) {
-        Write-Host "API Key already set to $Env:CivoToken"
-        Write-Host "If you want to override the key, you can use the -Force switch!"
+        Write-Error "API Key already set to $Env:CivoToken"
+        Write-Warning "If you want to override the key, you can use the -Force switch!"
     } else {
         New-Item -Name CivoToken -Path "Env:" -Value $ApiKey -Force
     } 
